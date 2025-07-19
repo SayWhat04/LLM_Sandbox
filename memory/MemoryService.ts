@@ -351,7 +351,7 @@ export class MemoryService {
 
   private parseGitDiff(diff: string): { added: string[], modified: string[], deleted: string[] } {
     const lines = diff.split('\n');
-    const changes = { added: [], modified: [], deleted: [] };
+    const changes: { added: string[], modified: string[], deleted: string[] } = { added: [], modified: [], deleted: [] };
 
     for (const line of lines) {
       const [status, file] = line.split('\t');
