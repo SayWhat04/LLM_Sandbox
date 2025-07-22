@@ -1,0 +1,16 @@
+{
+  "task": "kategorie",
+  "apikey": "97ad060a-008e-40cc-8012-f8cbaaa3968e",
+  "answer": {
+    "people": [
+      "2024-11-12_report-00-sektor_C4.txt",
+      "2024-11-12_report-07-sektor_C4.txt",
+      "2024-11-12_report-10-sektor-C1.mp3"
+    ],
+    "hardware": [
+      "2024-11-12_report-13.png",
+      "2024-11-12_report-15.png",
+      "2024-11-12_report-17.png"
+    ]
+  }
+}
