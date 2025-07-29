@@ -1,0 +1,5 @@
+MATCH (rafal:User {username: 'Rafał'}), (barbara:User {username: 'Barbara'}),
+      path = shortestPath((rafal)-[*]-(barbara))
+RETURN path,
+       length(path) as pathLength,
+       [node in nodes(path) | node.username] as usernames
