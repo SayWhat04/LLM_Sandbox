@@ -1,0 +1,53 @@
+KOMPLEKSOWY OPIS MAPY - SIATKA 4x4
+
+OGÓLNY OPIS:
+Obraz przedstawia mapę podzieloną na siatkę 4x4 (łącznie 16 pól), wykonaną w stylu czarno-białych ilustracji/szkiców. Każde pole zawiera różne elementy krajobrazu i obiektów, tworząc razem spójną mapę terenu.
+
+SZCZEGÓŁOWY OPIS WEDŁUG POZYCJI (RZĄD x KOLUMNA):
+
+RZĄD 1 (górny):
+- Pozycja 1,1: Znacznik lokalizacji (pin) - czarna ikona przypominająca kroplę z kółkiem w środku, umieszczona na białym tle. PUNKT STARTOWY.
+- Pozycja 1,2: Łąka/pole - obszar z trawą i pojedynczymi kłosami zbóż lub wysokimi trawami
+- Pozycja 1,3: Drzewo liściaste - duże drzewo z okrągłą, bujną koroną, rosnące na trawie
+- Pozycja 1,4: Dom/budynek - struktura mieszkalna z dachem dwuspadowym, oknami i kominem
+
+RZĄD 2:
+- Pozycja 2,1: Łąka z trawą - podobny teren jak w 1,2, pokryty trawą i drobnymi roślinami
+- Pozycja 2,2: Wiatrak - tradycyjny młyn wietrzny z charakterystycznymi skrzydłami/żaglami, stojący na wzgórzu porośniętym trawą
+- Pozycja 2,3: Łąka/pole - kolejny obszar trawiasty z pojedynczymi wysokimi trawami
+- Pozycja 2,4: Łąka/pole - podobny teren trawiasty
+
+RZĄD 3:
+- Pozycja 3,1: Łąka/pole - obszar pokryty trawą i drobnymi roślinami
+- Pozycja 3,2: Łąka/pole - kolejny trawiasty teren
+- Pozycja 3,3: Skały/kamienie - formacja skalna składająca się z kilku dużych głazów lub kamieni
+- Pozycja 3,4: Grupa drzew - dwa lub trzy drzewa liściaste rosnące blisko siebie
+
+RZĄD 4 (dolny):
+- Pozycja 4,1: Góry/wzgórza - formacja górska z kilkoma szczytami o ostrych kształtach
+- Pozycja 4,2: Góry/wzgórza - kontynuacja terenu górskiego z podobnymi szczytami
+- Pozycja 4,3: Samochód - pojazd przedstawiony z góry, prawdopodobnie sedan lub podobny typ auta
+- Pozycja 4,4: Jaskinia/grota - wejście do jaskini lub naturalnej groty w skale
+
+CHARAKTERYSTYKA STYLISTYCZNA:
+- Styl: Czarno-białe ilustracje w stylu szkiców/grafik liniowych
+- Technika: Kreskowanie i cieniowanie dla nadania głębi
+- Perspektywa: Widok z góry (bird's eye view) dla większości elementów
+- Spójność: Wszystkie elementy wykonane w jednolitym stylu graficznym
+
+ELEMENTY TOPOGRAFICZNE:
+- Tereny płaskie: Łąki i pola (pozycje 1,2; 2,1; 2,3; 2,4; 3,1; 3,2)
+- Tereny wyżynne: Wzgórze z wiatrakiem (pozycja 2,2)
+- Tereny górskie: Formacje górskie (pozycje 4,1; 4,2)
+- Obiekty naturalne: Drzewa, skały, jaskinia
+- Obiekty sztuczne: Dom, wiatrak, samochód, znacznik lokalizacji
+
+ZASTOSOWANIE:
+Mapa może służyć jako:
+- Ilustracja do gier planszowych lub komputerowych
+- Schemat terenu dla celów edukacyjnych
+- Podstawa do planowania tras lub lokalizacji
+- Element graficzny w materiałach informacyjnych
+
+ROZMIESZCZENIE ELEMENTÓW:
+Mapa pokazuje zróżnicowany krajobraz przechodzący od terenów mieszkalnych i rolniczych w górnej części, przez tereny otwarte w środku, do terenów górskich w dolnej części, co sugeruje naturalną progresję od obszarów zamieszkanych do dzikich. 
