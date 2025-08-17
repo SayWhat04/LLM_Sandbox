@@ -1,0 +1,62 @@
+# Analiza notatnika Rafała - Zadanie Module 4/5
+
+## PROMPT UŻYTKOWNIKA:
+Na podstawie @notatnik-rafala.txt odpowiedz krótko i zwięźle na poniższe pytania:
+{
+  "01": "Do którego roku przeniósł się Rafał",
+  "02": "Kto wpadł na pomysł, aby Rafał przeniósł się w czasie?",
+  "03": "Gdzie znalazł schronienie Rafał? Nazwij krótko to miejsce",
+  "04": "Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)",
+  "05": "Gdzie się chce dostać Rafał po spotkaniu z Andrzejem?"
+}
+
+## ODPOWIEDŹ:
+```json
+{
+  "01": "2020",
+  "02": "Adam",
+  "03": "Jaskinia/schronienie w lesie koło Grudziądza",
+  "04": "2024-11-12",
+  "05": "Lubawa koło Grudziądza"
+}
+```
+
+## PROCES ROZUMOWANIA:
+
+### Analiza pytania 01: "Do którego roku przeniósł się Rafał"
+- Na stronie 1 Rafał pisze: "do dziś dnia nie mogę uwierzyć, że jestem w 20... roku"
+- Kontekst: Rafał wspomina o GPT-2, które powstało w 2019
+- Na stronie 5 pisze: "No i powstało GPT-2. Słyszałem w wiadomościach"
+- Wniosek: Rafał przeniósł się do roku 2020 (tuż po powstaniu GPT-2)
+
+### Analiza pytania 02: "Kto wpadł na pomysł, aby Rafał przeniósł się w czasie?"
+- Na stronie 4: "Dlaczego Adam wybrał akurat ten rok? Według jego wyliczeń..."
+- Jasno wskazuje, że to Adam podjął decyzję o wyborze roku
+- Adam planował całą misję i miał konkretne wyliczenia
+- Wniosek: Adam był pomysłodawcą podróży w czasie
+
+### Analiza pytania 03: "Gdzie znalazł schronienie Rafał?"
+- Na stronie 16: "Znalazłem miejsce schronienia. Tutaj nikt mnie nie znajdzie"
+- "To miejsce nie jest szczególnie oddalone od miasta, w którym spędziłem ostatnie lata"
+- "Trochę tu zimno i ciemno, ale bezpiecznie"
+- Kontekst geograficzny: Grudziądz (strona 6)
+- Wniosek: Schronienie w lesie/jaskini koło Grudziądza
+
+### Analiza pytania 04: "Którego dnia Rafał ma spotkanie z Andrzejem?"
+- Na stronie 18: "11 listopada 2024"
+- Bezpośrednio po tej dacie: "Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro"
+- Logika: jeśli 11 listopada pisze "to już jutro", spotkanie jest 12 listopada
+- Wniosek: 2024-11-12
+
+### Analiza pytania 05: "Gdzie się chce dostać Rafał po spotkaniu z Andrzejem?"
+- Na stronie 19: "później użyć jego samochodu, aby... się dostać do Lubawy koło Grudziądza"
+- Rafał planuje wykorzystać samochód Andrzeja do podróży
+- Wniosek: Lubawa koło Grudziądza
+
+## DODATKOWE OBSERWACJE:
+- Rafał ma problemy psychiczne/schorzenie, które ma być uleczone w przyszłości
+- Historia zawiera elementy podróży w czasie i sztucznej inteligencji
+- Rafał współpracował z profesorem Majem nad badaniami
+- Azazel to postać z przyszłości, która otrzymała badania od Rafała
+- Barbara to kolejna postać, która kieruje Rafałem w jego misji
+- Cała historia ma charakter science fiction z elementami thriller/mystery 
