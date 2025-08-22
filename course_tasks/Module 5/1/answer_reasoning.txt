@@ -1,0 +1,102 @@
+ANALIZA ROZMÓW TELEFONICZNYCH - TOK ROZUMOWANIA I UZASADNIENIA ODPOWIEDZI
+
+=== ANALIZA FAKTÓW Z FOLDERU /facts ===
+
+1. f01.txt - Sektor C: miejsce testowania nowoczesnej broni, strzeżony obszar
+2. f02.txt - Sektor A: montaż robotów przemysłowych i wojskowych  
+3. f03.txt - Sektor B: badania nad ogniwami bateryjnymi
+4. f04.txt - Aleksander Ragowski: nauczyciel angielskiego, uczy się programowania w JAVIE (nie JavaScript!), ukrywa się
+5. f05.txt - Barbara Zawadzka: frontend developer, związana z Aleksandrem Ragowskim, zna JavaScript i Python
+6. f06.txt - Azazel: tajemnicza postać z zdolnościami teleportacji, współpracuje z Zygfrydem
+7. f07.txt - Rafał Bomba: laborant, posługuje się fałszywym nazwiskiem "Musk", ma problemy psychiczne
+8. f08.txt - Adam Gospodarczyk: rekruter ruchu oporu, współpracuje z Azazelem
+9. f09.txt - Sektor D: MAGAZYN (nie miejsce produkcji broni!), wyłączony z regularnego użytku
+
+=== IDENTYFIKACJA ROZMÓWCÓW ===
+
+ROZMOWA 1: Barbara (agentka) + Samuel (przełożony)
+- Agentka mówi o spotkaniu z kimś w kiepskim stanie psychicznym
+- Mowa o "gościu" który ma wszystko w komputerze
+- Kontekst: Barbara spotkała się z Aleksandrem Ragowskim
+
+ROZMOWA 2: Samuel + Zygfryd
+- Samuel relacjonuje Zygfrydowi rozmowę z agentką (Barbarą)
+- Mowa o "durnej babie" która jako wymówkę wzięła "naukę JavaScriptu"
+- Samuel mówi o śmierci "gościa" i dronie
+
+ROZMOWA 3: Samuel + Zygfryd
+- Samuel mówi o problemach z zasięgiem
+- KLUCZOWE KŁAMSTWO: "byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń"
+- Zygfryd daje Samuelowi zadanie skontaktowania się z Tomaszem
+- Samuel otrzymuje endpoint: https://rafal.ag3nts.org/510bc
+
+ROZMOWA 4: Samuel + Tomasz
+- Samuel dzwoni do Tomasza po hasło
+- Tomasz podaje hasło: "NONOMNISMORIAR"
+- Mowa o "numerze piątym" który jest "posłuszną owieczką"
+
+ROZMOWA 5: Witek + Barbara
+- Witek prosi Barbarę o pomoc z zabezpieczeniami
+- Witek podaje endpoint: https://rafal.ag3nts.org/b46c3
+- Barbara pyta skąd ma endpoint
+- Witek: "Ten Twój 'nauczyciel' mi go dostarczył, ale hasła jeszcze nie zdobył, ale pracuje on nad tym"
+- Barbara reaguje na słowo "nauczyciel" - to Aleksander Ragowski
+
+=== IDENTYFIKACJA KŁAMSTWA ===
+
+Samuel w rozmowie 3 mówi: "byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń"
+
+WERYFIKACJA Z FAKTAMI:
+- f09.txt jasno stwierdza: "Sektor D obecnie pozostaje wyłączony z regularnego użytku i pełni funkcję tymczasowego MAGAZYNU"
+- "W przeszłości sektor ten służył do produkcji i montażu podzespołów mechanicznych, ale ze względu na przebudowę fabryki został wyłączony z eksploatacji"
+
+WNIOSEK: Samuel KŁAMIE o tym, że w sektorze D produkuje się broń.
+
+=== ANALIZA ENDPOINTÓW ===
+
+Dwa różne endpointy:
+1. Samuel (kłamca) podaje: https://rafal.ag3nts.org/510bc
+2. Witek (nie kłamie) podaje: https://rafal.ag3nts.org/b46c3
+
+Prawdziwy endpoint to ten od Witka, ponieważ Samuel został zidentyfikowany jako kłamca.
+
+=== TEST API ===
+
+Endpoint: https://rafal.ag3nts.org/b46c3
+Hasło: "NONOMNISMORIAR" (od Tomasza z rozmowy 4)
+Odpowiedź API: {"code": 0, "message": "0c10c7d541b69cbb3e8ac748ec65502b", "hint": "This token changes every minute!"}
+
+=== UZASADNIENIA ODPOWIEDZI ===
+
+01. "Jeden z rozmówców skłamał podczas rozmowy. Kto to był?"
+ODPOWIEDŹ: Samuel
+UZASADNIENIE: Samuel w rozmowie 3 twierdzi, że jest w sektorze D "gdzie się produkuje broń", ale fakty z f09.txt jasno wskazują, że sektor D to magazyn, nie miejsce produkcji broni.
+
+02. "Jaki jest prawdziwy endpoint do API podany przez osobę, która NIE skłamała?"
+ODPOWIEDŹ: https://rafal.ag3nts.org/b46c3
+UZASADNIENIE: Witek (który nie został przyłapany na kłamstwie) podaje ten endpoint w rozmowie 5. Samuel (kłamca) podaje fałszywy endpoint w rozmowie 4.
+
+03. "Jakim przezwiskiem określany jest chłopak Barbary?"
+ODPOWIEDŹ: nauczyciel
+UZASADNIENIE: W rozmowie 5 Witek mówi o "Twoim 'nauczycielu'", a Barbara odpowiada "przestań tak o nim mówić. Wiesz przecież, jak on się wkurza, gdy się go nazwie nauczycielem". Z faktów (f04.txt, f05.txt) wiemy, że Barbara była związana z Aleksandrem Ragowskim - nauczycielem angielskiego.
+
+04. "Jakie dwie osoby rozmawiają ze sobą w pierwszej rozmowie? Podaj ich imiona"
+ODPOWIEDŹ: Barbara i Samuel
+UZASADNIENIE: W rozmowie 1 uczestniczy "agentka" (Barbara - z kontekstu rozmowy 5 gdzie Barbara mówi "Rozmawiałam z Samuelem") i jej przełożony. Z rozmowy 2 wynika, że Samuel rozmawiał z agentką, więc to Samuel był tym przełożonym.
+
+05. "Co odpowiada poprawny endpoint API po wysłaniu do niego hasła w polu 'password' jako JSON?"
+ODPOWIEDŹ: 0c10c7d541b69cbb3e8ac748ec65502b
+UZASADNIENIE: Test API z prawdziwym endpointem (https://rafal.ag3nts.org/b46c3) i hasłem "NONOMNISMORIAR" zwrócił token w polu "message".
+
+06. "Jak ma na imię osoba, która dostarczyła dostęp do API, ale nie znała do niego hasła, jednak nadal pracuje nad jego zdobyciem?"
+ODPOWIEDŹ: Aleksander
+UZASADNIENIE: W rozmowie 5 Witek mówi do Barbary: "Ten Twój 'nauczyciel' mi go dostarczył, ale hasła jeszcze nie zdobył, ale pracuje on nad tym". "Nauczycielem" Barbary jest Aleksander Ragowski (z faktów f04.txt i f05.txt).
+
+=== KLUCZOWE POWIĄZANIA ===
+
+- Barbara = agentka z rozmowy 1, frontend developer, związana z Aleksandrem
+- Samuel = przełożony Barbary, kłamca w sprawie sektora D
+- Aleksander Ragowski = "nauczyciel", chłopak Barbary, dostarczył endpoint Witkowi
+- Witek = "numer piąty", "posłuszna owieczka" która wykonuje polecenia
+- Zygfryd = szef Samuela, zleca zadania
+- Tomasz = pracownik Centrali, zna hasło do pierwszej warstwy zabezpieczeń 
