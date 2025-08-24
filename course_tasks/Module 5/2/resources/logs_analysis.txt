@@ -1,0 +1,83 @@
+# Analiza logów aplikacji - log_analysis.txt
+
+## Ogólny opis aplikacji
+
+Aplikacja to **Agent** który przetwarza zapytania użytkowników dotyczące lokalizacji osób lub miejsc, a następnie zbiera współrzędne GPS i raportuje wyniki do centralnego systemu.
+
+## Szczegółowy workflow aplikacji
+
+### 1. Inicjalizacja i przygotowanie
+- Uruchamianie Agenta
+- Wczytywanie danych z pliku (prawdopodobnie JSON z zapytaniem/zadaniem)
+- Przetwarzanie pytania użytkownika
+- Przygotowywanie planu działania
+
+### 2. Analiza typu zapytania
+**Krok 1:** Aplikacja rozpoznaje czy w zapytaniu chodzi o:
+- **Nazwę użytkownika** (np. "Barbara") → kieruje do bazy danych MySQL
+- **Nazwę miejsca** (np. "SOSNOWIEC", "RADOM") → kieruje do API `/places`
+
+### 3. Przetwarzanie użytkowników
+Gdy wykryje username:
+- Sprawdza czy użytkownik istnieje w zewnętrznej bazie MySQL
+- Pobiera ID użytkownika (np. Barbara → ID=39, RAFAŁ → ID=28)
+- Przygotowuje zapytanie JSON z userID do API `/gps`
+
+### 4. Przetwarzanie miejsc
+Gdy wykryje miejsce:
+- Sprawdza czy miejsce istnieje w API `/places`
+- Jeśli miejsce istnieje, wyciąga użytkowników z tego miejsca
+- Filtruje użytkowników (pomija nieistniejących jak "WALDEMAR")
+- Zbiera ID dla istniejących użytkowników
+
+### 5. Pobieranie współrzędnych GPS
+- Dla każdego znalezionego użytkownika wysyła zapytanie do `/gps`
+- Otrzymuje współrzędne w formacie: `{"lat": 53.45202959644885, "lon": 18.759208410091723}`
+- Implementuje mechanizm retry przy błędach (np. error 501)
+
+### 6. Finalizacja i raportowanie
+- Przygotowuje końcowy JSON z zebranymi danymi
+- Wysyła raport do `c3ntrala.ag3nts.org/report` jako typ 'gps'
+- Oczekuje potwierdzenia (kod 0 = "Answer accepted")
+
+## Problemy i błędy w logach
+
+### Log #01 (2025/08/21 5:01)
+- **Problem:** Błąd składni JSON - dodatkowy przecinek `{ "userID": 39,}`
+- **Skutek:** Parse error, aplikacja nie mogła kontynuować
+- **Status:** FATAL error
+
+### Log #02 (2025/07/15 21:37)
+- **Status:** Sukces
+- **Przetworzone dane:** 4 użytkowników z miejsca RADOM
+- **Problemy:** Błędy 501, ale mechanizm retry działał poprawnie
+- **Wynik:** "Answer accepted" od systemu centralnego
+
+### Log #03 (2025/07/11 10:21)
+- **Problem:** Błąd wczytywania pliku wejściowego
+- **Przyczyna:** Nieprawidłowy format JSON w pliku źródłowym
+- **Status:** FATAL error na początku procesu
+
+## Architektura systemu
+
+### Frontend
+- Agent lokalny wykonujący zadania
+
+### Backend
+- **Baza MySQL:** Przechowuje użytkowników i ich ID
+- **API `/places`:** Obsługuje zapytania o miejsca
+- **API `/gps`:** Zwraca współrzędne GPS dla użytkowników
+- **System centralny:** `c3ntrala.ag3nts.org/report` - odbiera finalne raporty
+
+## Wnioski
+
+1. **Funkcjonalność:** Aplikacja skutecznie łączy dane tekstowe z lokalizacjami GPS
+2. **Niezawodność:** Implementuje mechanizmy retry i error handling
+3. **Problemy:** Wrażliwa na błędy składni JSON i jakość danych wejściowych
+4. **Integracja:** Część większego systemu do śledzenia lokalizacji użytkowników
+
+## Przykłady działania
+
+- **Zapytanie o użytkownika:** "Barbara" → MySQL (ID=39) → GPS API → współrzędne
+- **Zapytanie o miejsce:** "RADOM" → Places API → lista użytkowników → GPS dla każdego
+- **Błędy:** Automatyczne retry przy błędach sieciowych (501), debug info dla developerów 

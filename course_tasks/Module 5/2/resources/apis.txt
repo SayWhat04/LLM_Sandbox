@@ -1,0 +1,40 @@
+<apis>
+<api id='places'>
+    Posiada jeden endpoint HTTP POST: https://c3ntrala.ag3nts.org/places
+    Request body: 
+    {
+        "apikey": "97ad060a-008e-40cc-8012-f8cbaaa3968e",
+        "query": "MIEJSCOWOŚĆ"
+    }
+    Uwagi:
+    apikey jest stały, nie należy go zmieniać
+    Response Body:
+    {
+        "reply": [
+          WYNIK DZIAŁANIA SQL QUERY
+        ],
+        "error": "OK"
+    }
+    Uwagi:
+     - "error": "OK" - oznacza, że zapytanie przebiegło prawidłowo
+</api>
+<api id='apidb'>
+    Posiada jeden endpoint HTTP POST: https://c3ntrala.ag3nts.org/apidb
+    Request body: 
+    {
+        "task": "database",
+        "apikey": "97ad060a-008e-40cc-8012-f8cbaaa3968e",
+        "query": "SQL QUERY"
+    }
+    Uwagi:
+        - task jest stały, nie należy go zmieniać
+        - apikey jest stały, nie należy go zmieniać
+    Response body:
+    {
+        "code": 0,
+        "message": "LIST IMION OSÓB W DANEJ MIEJSCOWOŚCI"
+    }
+    Uwagi:
+        - w parametrze message imiona są jednym ciągiem znaków podzielonym spacjami
+</api>
+</apis>

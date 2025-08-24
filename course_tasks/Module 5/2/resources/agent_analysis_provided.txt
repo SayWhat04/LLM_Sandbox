@@ -1,0 +1,5 @@
+Agent, którego masz imitować, służył do namierzania ludzi na podstawie sygnału GPS.
+Listę osób do sprawdzenia możesz pobrać z API /places opisanego apis.txt.
+Twoim zadaniem jest przygotowanie agenta, który będzie decydował, jakich danych potrzebuje, w którym momencie i na podstawie takich przemyśleń  podejmie decyzję, którego API z apis.txt powinien użyć.
+Moduł GPS zwróci Ci koordynaty dla podanego ID użytkownika. Scalisz je w jedną wielką tablicę w formacie podanym w zadaniu.
+Pamiętaj, że prompt prosi o nieprzesyłanie danych Barbary. Możesz je wyrzucić z odpowiedzi programistycznie lub na podstawie prompta - jak wolisz.
