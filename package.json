@@ -86,7 +86,8 @@
     "task4_1": "bun run \"course_tasks/Module 4/1/app.ts\"",
     "task4_3": "bun run \"course_tasks/Module 4/3/app.ts\"",
     "task4_4": "bun run \"course_tasks/Module 4/4/app.ts\"",
-    "task5_2": "bun run \"course_tasks/Module 5/2/app.ts\""
+    "task5_2": "bun run \"course_tasks/Module 5/2/app.ts\"",
+    "task5_3": "bun run \"course_tasks/Module 5/3/app.ts\""
   },
   "peerDependencies": {
     "typescript": "^5.6.3"
